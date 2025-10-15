@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <style>
+        /*Base Styles*/
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    
+        ;:root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #7209b7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --card-bg: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: var(--dark); min-height: 100vh; padding-bottom: 2rem;
+        }
+        /*Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary)); 
+            color:white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content:  '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+        opacity="0.1"><defs><pattern id="grid"width="10" height="10"
+            patternUnits="userSpaceOnUse"><path d="M 10 0 L 000 10" fill='none'
+            stroke="white" stroke-width="1"/><?pateern><?defs><rect width="100" height="100" fill="url(%23grid)"/></svg');
+
+            .header-content }
+            position: reccclative;
+            z-index; 1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0.2);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba967, 97, 238, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-link:hover [
+            background-color: rgba(67, 97, 238, 0.1);
+        color: var(--primary);
+        transform: translateY(-2px);
+        ]
+
+        .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /*Main Content <Styles></Styles>
+        .dashboard {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 rem;
+        }
+
+        .section-title {
+        text-align; center;
+        margin: 2rem 0 1rem;
+        color: white;
+        font-size: 1.8rem;
+        text-shadow; 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .widgets-grid {
+        dispaly: grid;
+        grid-template-columns:
+        repeat(auto-fill, mimax9350px, 1fr)); gap: 1.5rem;
+        }
+
+        .widget {
+        background-olor: var(--card-bg);
+        border-radius: 12px; 
+        padding: 1.5rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transformY(5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0,15);
+        }
+
+        .widget-header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding-bottom; 0.75;
+        border-bottom: 1px solid rgba(0, 0, 0,1);
+        }
+
+    <h1>Personal dashoard</h1>
+    </hearder>
+
+    <nav>
+        </div class="nav-link active">Home</div>
+        <div class="nav-link">Tools</div>
+            <div class="nav-link">About</div>
+            <div>
+
+                <!--Form Validation-->
+                <div class=""widget">
+                    <h3>Motivational Quote</h3>
+                    <button
+                    oneclick="randomQuote()">New Quote</button>"
+                    <div id="quoteDisplay"><</div>
+
+                    <!--Form Validation-->
+                    <div class="widget">
+                        <h3>contact Form</h3>
+                        <inout type="text" id="name"
+                        placeholder="Your Name"
+                        <input type="text" id="name"
+                        placeholder"Your Message"></textarea>
+                        <button
+                        oneclick="validationform()"submit</button>
+                        </div>div id="formResult"></div>
+                        </div>
+
+                        <footer>
+                            <p>2024 Personal Dashboard</p>
+                        </footer>
+
+                        <script>
+    // 1.Display current date and time
+    function showtime() {
+    const now = new Date();
+    
+    document.getElementById('timedisplay').textContent = now.tolocaleString();
+    }             
+    setInterval(showTime, 1000);
+    
+    // 2. Toggle between light and dark mode
+    function changeThese() {
+    document.body.classList.toggle('dark')
+    }
+
+    // 3. Calculate age from birth year
+    function calculateAge() {
+    const birthYear = document.getElementById('birthYear').value;
+    const currentYear = new Date().getFullYear();
+    if (birthYear & birthYear>1900 & birthYear <=currentYear) {
+    
+    document.getElementById('ageResult').textContent = 'You are ${currentYear - birthYear} years old';
+    } else {
+
+    document.getelementByid('ageResult').textContent = 'Please enter a valid birth year';
+                        }
+                     }
+
+                     // 4. Personalized greeting 
+                     function greetUser() {
+                     const name = prompt9'Please enter your name:');
+if (name) {
+
+document.getElementById('greeting').text content = 'Hello, ${name}! Welcome to your dashboard.';
+}
+}
+
+// 5. Random motivational quote const quotes = [
+"The only way to do great work is to love what you do. - Steve Jobs",
+"Innovation distinguishes between a leader and a follower. - Steve Jobs",
+"The future belongs to those who believe in the beauty of their dreams. - Eleanor Rooselvet",
+"Success is not final,failure is not fatal: it is the courage to continue that counts. - winston Churchill"
+];
+
+function randomQuote() {
+const randomIndex =math.floor(math.random() *quotes.lenght);
+
+document.getElementById('quoteDisplay').textContent = quotes[randomIndex];
+}
+
+// 6. Validate contact form 
+function validationForm() {
+const name = 
+document.getElementById('name').value;
+const email =
+ document.getElementById('email').value;
+ const message =
+ document.getElementById('formResult');
+ if (!name || !email || !message) {
+ result.textContent= 'Please fill in all the fields';
+ result.style.color = 'red';
+ return;
+ }
+ 
+ if (!email.includes('@')|| !email.includes('.')){
+ result.textContent = 'Please enter a valid email address';
+ result.style.color ='red';
+ return;
+ }
+ 
+ result.textContent = 'Form submitted successfully!';
+ resuklt.style.coloe = 'green';
+ }
+
+ // 7. Character counter
+ function countCharacter() {
+ const text =
+ document.getElementById('text input').value;
+ 
+ document.getElementById}('charCount').textContent = '${text.lenght} characters';
+ }
+
+ //Navigation
+ document.querySelectionAll('.nav-link').forEach(link => {
+ 
+ link.addEventListener('click,function() {
+ 
+ document.querySelectorAll('nav-link').forEach(1 =>
+ 1.classList.remove('active'));
+ 
+ this.classList.add('active}');
+ });
+                        });
+    </script>
+</body>
+</html>
