@@ -8,6 +8,9 @@
 ## Project Overview 
 A responsive website for Sweet Rise Bakery showcasing their products and services.
 
+## GitHub Repository
+https://github.com/user-bianca2712/rcc-web/sweet-rise-bakery
+
 ## Website Goals
 -Increase online presence
 -Generate customer enquiries
